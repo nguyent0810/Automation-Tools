@@ -30,8 +30,8 @@ def clean_percentage(percentage):
 def send_email():
     smtp_server = "smtp.gmail.com"
     port = 587
-    sender_email = "siouxtest05@gmail.com"
-    receiver_email = "tung.hdv@gmail.com"
+    sender_email = ""
+    receiver_email = ""
     message = """\
         Subject: Hi there
         The percentage is under -10%"""
@@ -62,7 +62,7 @@ def stock_price_notifier():
     if percentage < -0.10:
         send_email()
     else: 
-        print(f"The percentage now is {percentage}%")
+        print(f"The percentage now is {per}")
     return percentage
 
 stock_price_notifier()
